@@ -16,7 +16,8 @@ public class Sample {
 		// create Notification object 
 		Notification raven = new Notification();
 		List<String> asd =new ArrayList<String>();
-		asd.add("dUvtQ4GJVC8:APA91bGtcLkdNDSx2Am9uMJ7gIoQ5MYkkrNsV6XBreSZjn-No2Vk1nPXTIf83tc5Q3U4Ro5dc0hRMtPmgD1eVBx-t6c2w3fGVZFttIB0si2zWWuo8GANsYL9IqF41PYgIlNMFFhqwUpn");
+		//asd.add("dUvtQ4GJVC8:APA91bGtcLkdNDSx2Am9uMJ7gIoQ5MYkkrNsV6XBreSZjn-No2Vk1nPXTIf83tc5Q3U4Ro5dc0hRMtPmgD1eVBx-t6c2w3fGVZFttIB0si2zWWuo8GANsYL9IqF41PYgIlNMFFhqwUpn");
+		asd.add("/topics/example");
 		
 		HashMap<String, Object> data = new HashMap<String, Object>();
 		data.put("Hello", "World!");
@@ -25,7 +26,7 @@ public class Sample {
 		
 		// build raven message using the builder pattern
 		raven
-		//to("dUvtQ4GJVC8:APA91bGtcLkdNDSx2Am9uMJ7gIoQ5MYkkrNsV6XBreSZjn-No2Vk1nPXTIf83tc5Q3U4Ro5dc0hRMtPmgD1eVBx-t6c2w3fGVZFttIB0si2zWWuo8GANsYL9IqF41PYgIlNMFFhqwUpn")
+		.to("/topics/example")
 			
 			
 			.delay_while_idle(true)
@@ -33,10 +34,10 @@ public class Sample {
 			.restricted_package_name("com.blp.mobileapp.orion")
 			.dry_run(false)
 			.data(data)
-			.registration_ids(asd)
+			//.registration_ids(asd)
 			.title("Testing")
 			.body("Hello World!")
-			.color("#00FF00");
+			.color("#00FFFF");
 		
 		
 		
